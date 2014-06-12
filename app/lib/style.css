@@ -1,0 +1,17 @@
+.gridStyle {
+    border: 1px solid rgb(212,212,212);
+    width: 900px; 
+    height: 300px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.contenedor {
+	border: 1px solid rgb(212,212,212);
+    width: 1000px; 
+    height: 500px;
+    margin: 0 auto;
+    text-align: left;
+    background-color: #F8F8F8;
+    
+}

@@ -1,0 +1,58 @@
+<!doctype html>
+<html ng-app="registrarUsuario">
+	<head>
+		<title>Registro de usuarios</title>
+		
+		<link rel="shortcut icon" href="../images/icon.png">
+		
+		<link rel="stylesheet" type="text/css" href="../lib/bootstrap/css/bootstrap.css" />		
+		<script type="text/javascript" src="../lib/angular/angular.js"></script>
+		<script type="text/javascript" src="../scripts/controllers/registro.js"></script>
+		<script type="text/javascript" src="../lib/angular-resource.min.js"></script>
+		<script type="text/javascript" src="../lib/ui-bootstrap-tpls-0.11.0.min.js"></script>
+	
+	</head>
+
+<body>
+	<div ng-controller="RegistroCtrl" class="container">
+	
+		<alert ng-repeat="message in messages" type="message.type" close="closeAlert($index)">
+			{{message.msg}}
+			<div ng-show="message.orderId">
+				<a ng-href="/service/coffeeshop/{{coffeeShopId}}/order/{{message.orderId}}">Order details</a> 
+			</div>
+		</alert>
+		
+    	<form ng-submit="registrarUsuario()">
+             
+             <div class="form-group"> 
+             	<label>Estado: </label>
+                <select ng-model="drink.size" ng-options="size for size in sizes" class="form-control"></select>
+             </div>
+
+			<div class="form-group">
+				<label>Ingresar Nombre: </label> <input type="text"
+					ng-model="drink.drinker" ng-required="true" class="form-control" />
+			</div>
+			
+			<div class="form-group">
+				<label>Ingresar Apellido: </label> <input type="text"
+					ng-model="drink.drinker" ng-required="true" class="form-control" />
+			</div>
+			
+			<div class="form-group">
+				<label>Ingresar Cedula: </label> <input type="text"
+					ng-model="drink.drinker" ng-required="true" class="form-control" />
+			</div>
+
+			<div class="form-group">
+             	<input type="submit" value="Registrar Usuario" Class="btn btn-default btn-lg" />
+             </div>
+             
+             	<pre>{{ drink|json }}</pre>
+         </form>      
+	</div>   
+
+</body>
+</html>
+
