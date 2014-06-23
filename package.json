@@ -2,7 +2,7 @@
     "name": "appgym-udea-web",
     "version": "0.0.0",
     "description": "Prueba",
-    "main": "Gruntfile.js",
+    "main": "web-server.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
     },
